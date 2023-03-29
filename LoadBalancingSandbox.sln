@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadBalancingSandbox", "LoadBalancingSandbox\LoadBalancingSandbox.csproj", "{878B348E-1C92-410B-A189-0F35BB620014}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{878B348E-1C92-410B-A189-0F35BB620014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{878B348E-1C92-410B-A189-0F35BB620014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{878B348E-1C92-410B-A189-0F35BB620014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{878B348E-1C92-410B-A189-0F35BB620014}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
