@@ -4,22 +4,23 @@ public static class Program
 {
     public static void Main(string[] args)
     {
-        CreateHostBuilder(args)
+        CreateHost(args)
             .Build()
             .Run();
     }
 
-    private static IHostBuilder CreateHostBuilder(string[] args)
+    private static IWebHostBuilder CreateHost(string[] args)
     {
-        return Host
-            .CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(hostBuilder =>
-            {
-                hostBuilder.UseStartup<Startup>();
-            })
+        var host = new WebHostBuilder()
+            .UseKestrel(kestrelServerOptions =>
+                kestrelServerOptions
+                    .UseSystemd())
             .ConfigureAppConfiguration(app =>
-            {
-                app.AddJsonFile("appsettings.json");
-            });
+                app
+                    .AddCommandLine(args)
+                    .AddJsonFile("appsettings.json"))
+            .UseStartup<Startup>();
+
+        return host;
     }
 }
